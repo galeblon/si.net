@@ -14407,6 +14407,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/asobecki/Projects/si.net/demo/Views/Binding/Result.cshtml",
+      "TargetPath": "Views\\Binding\\Result.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/asobecki/Projects/si.net/demo/Views/Shared/_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
@@ -14434,6 +14439,11 @@
     {
       "FilePath": "/Users/asobecki/Projects/si.net/demo/Views/Second/Reksio.cshtml",
       "TargetPath": "Views\\Second\\Reksio.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/asobecki/Projects/si.net/demo/Views/Binding/Formvalue.cshtml",
+      "TargetPath": "Views\\Binding\\Formvalue.cshtml",
       "FileKind": "mvc"
     },
     {

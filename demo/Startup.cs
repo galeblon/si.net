@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using demo.Models;
+using demo.Tools;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Configuration;
@@ -30,8 +32,14 @@ namespace demo
             services.AddControllers().AddNewtonsoftJson();
             services.AddControllers().AddXmlSerializerFormatters();
 
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
             services.Configure<RouteOptions>(options => {
                 options.ConstraintMap.Add("primeint", typeof(MyRouteConstraint));
+            });
+
+            services.AddMvc( options => {
+                options.Conventions.Add(new ControllerNameAttributeConvention());
             });
             
         }

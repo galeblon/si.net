@@ -90,3 +90,5 @@
 /Users/asobecki/Projects/si.net/demo/obj/Debug/netcoreapp3.1/demo.dll
 /Users/asobecki/Projects/si.net/demo/obj/Debug/netcoreapp3.1/demo.pdb
 /Users/asobecki/Projects/si.net/demo/obj/Debug/netcoreapp3.1/demo.genruntimeconfig.cache
+/Users/asobecki/Projects/si.net/demo/obj/Debug/netcoreapp3.1/Razor/Views/Binding/Formvalue.cshtml.g.cs
+/Users/asobecki/Projects/si.net/demo/obj/Debug/netcoreapp3.1/Razor/Views/Binding/Result.cshtml.g.cs

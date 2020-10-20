@@ -9,7 +9,8 @@
 7. Automatyczna serializacja danych na widoku do formatu XML (csproj, startup, klasa do serializacji, akcja) -> CatalogXml
 8. Dynamiczne wskazywanie typu serializacji
 9. Powrót do kontrollera "Ciasteczka" -> rozbudowa go do pełnego kontrolera dziedziczącego po Controller (Startup -> DI)
-10. Zabawa w Routing dla akcji Reksio -> !! druga akcja jest daleko poniżej pierwszej (zabawy c.d.)
+10. Zabawa w Routing dla akcji Reksio
+---
 11. Nachodzenie nazw kontrollerów - co zrobić? -> własny atrybut -> zmiana konwencji
 12. Wreszcie jaka będzie nazwa akcji w kontrolerze zagnieżdżonym. Porównaj z SecondController
 13. Może kiedyś uda się poprawić zmienną Catalog w RoutingController -> żeby zachowywała swój stan pomiędzy akcjami
@@ -18,3 +19,4 @@
 16. Własna fabryka dostawców wartości - cookies (dostawca wartości -> fabryka -> startup)
 17. Istniejące modele automatycznego wiązania -> sposób zamiany wartości z fabryk dostawców wartości na parametry akcji
 18. Testowanie wiązania modeli
+19. Token anulowania żądania asynchronicznego (przykład -> zadanie dodatkowe)
