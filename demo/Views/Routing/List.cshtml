@@ -1,0 +1,76 @@
+@model Dictionary<long, demo.Domain.Entities.Product>
+
+@{ // sekcja kodu
+    ViewData["Title"] = "Kontroller Home - products";
+    Random rnd = new Random();
+    int number = rnd.Next();
+}
+
+<div class="text-center">
+    <h1 class="display-4">Products</h1>
+    @if(TempData["message"] != null) {
+        <h4 class="display-4">@TempData["message"]</h4>
+    }
+    @foreach (var p in Model)
+    {
+        <p>@p.Key</p>
+        <p>@p.Value.Name</p>
+        <p>@p.Value.Price</p>
+        <p>@p.Value.Category</p>
+
+        <p><a asp-action="GetProduct" asp-route-id="@p.Value.id">Details</a></p>
+        <p><a asp-action="Delete" asp-route-id="@p.Value.id">Delete</a></p>
+        <hr/>
+    }
+</div>
+
+<div class="text-center">
+    <h2>We may also register new product</h2>
+    <form asp-action="Add" method="post">
+    <p>
+        <label for="id">ID</label>
+        <input type="text" name="id"/>
+        <br/>
+        <label for="Name">Name</label>
+        <input type="text" name="Name"/>
+        <br/>
+        <label for="Price">Price</label>
+        <input type="text" name="Price"/>
+        <br/>
+        <label for="Category">Category</label>
+        <input type="text" name="Category"/>
+    </p>
+    <p>
+        <input type="submit" name="Send"/>
+    </p>
+    </form>
+</div>
+
+<div class="text-center">
+    <h2>We may also register new product (Validation)</h2>
+    <form asp-action="validation" method="post">
+    <p>
+        <label for="id">ID</label>
+        <input type="text" name="id"/>
+        <br/>
+        <label for="Name">Name</label>
+        <input type="text" name="Name"/>
+        <br/>
+        <label for="Price">Price</label>
+        <input type="text" name="Price"/>
+        <br/>
+        <label for="Category">Category</label>
+        <input type="text" name="Category"/>
+    </p>
+    <p>
+        <input type="submit" name="Send"/>
+    </p>
+    </form>
+</div>
+
+<div class="text-center">
+    <h2>Now we can check is it a prime number</h2>
+    <h4>@number</h4>
+    <p><a href="/Routing/CheckPrime/@number">Check</a></p>
+</div>
+

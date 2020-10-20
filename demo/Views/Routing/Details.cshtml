@@ -1,0 +1,14 @@
+@model demo.Domain.Entities.Product
+
+@{
+    ViewData["Title"] = "Kontroller Home - Product details";
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Product details</h1>
+    <p>@Model.id</p>
+    <p>@Model.Name</p>
+    <p>@Model.Price</p>
+    <p>@Model.Category</p>
+</div>
