@@ -15,8 +15,7 @@ namespace demo.Controllers
             InitializeCatalog();        // na 3 wykładzie - naprawiamy stan katalogu po zmianie
         }
 
-        [HttpGet]
-        [ActionName("")]
+        [HttpGet("")]
         public IActionResult List() {
             return View("List", Catalog);
         }
@@ -39,7 +38,7 @@ namespace demo.Controllers
             return View("Details", p);
         }
 
-        [HttpPost]
+        [HttpPost("Add")]
         public IActionResult Add([Bind("id,Name,Price,Category")] Product product) {
             if(product != null && !Catalog.ContainsKey(product.id)) {
                 Catalog.Add(product.id, product);

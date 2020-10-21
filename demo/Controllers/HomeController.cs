@@ -9,6 +9,7 @@ using demo.Models;
 
 namespace demo.Controllers
 {
+    [Route("home")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -18,16 +19,22 @@ namespace demo.Controllers
             _logger = logger;
         }
 
+
+        [HttpGet("Index")]
         public IActionResult Index()
         {
             return View();
         }
 
+
+        [HttpGet("Privacy")]
         public IActionResult Privacy()
         {
             return View();
         }
 
+
+        [HttpGet("Error")]
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

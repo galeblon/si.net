@@ -64,11 +64,16 @@ namespace demo
                 options.UseCaseSensitivePaths = true;
             });
 
-            /*
+            
             services.AddSwaggerGen( c => {
-                c.SwaggerDoc("v1");
+                c.SwaggerDoc("v2", new Microsoft.OpenApi.Models.OpenApiInfo
+                {
+                    Version = "2.0",
+                    Title = "SI.API",
+                    Description = "Testing Swagger",
+                });
             }); 
-            */
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -103,11 +108,11 @@ namespace demo
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
 
-            /*
+            
             app.UseSwagger();
             app.UseSwaggerUI(options => {
-                options.SwaggerEndpoint("/swagger/v1/swagger.json", "SI.NET API v1");
-            }); */
+                options.SwaggerEndpoint("/swagger/v2/swagger.json", "SI.NET API v2");
+            });
         }
     }
 }

@@ -5,22 +5,27 @@ namespace demo.Controllers
 {
 
     [Route("/filters/[action]")]
-    public class FilterDemoController : IActionFilter
+    // Swagger nie radzi sobie z kontrolerem ktory jest jednoczesnnie filtrem
+    [FilterDemo]
+    public class FilterDemoController
     {
-        public void OnActionExecuted(ActionExecutedContext context)
-        {
-            System.Console.WriteLine("Po wykonaniu akcji");
-        }
-
-        public void OnActionExecuting(ActionExecutingContext context)
-        {
-            System.Console.WriteLine("Przed wejściem do akcji");
-        }
-
-
+        [HttpGet("Reksio")]
         public string Reksio() {
              System.Console.WriteLine("Wewnątrz akcji");
             return "rezultat";
+        }
+
+        private class FilterDemo : ActionFilterAttribute
+        {
+            public override void OnActionExecuted(ActionExecutedContext context)
+            {
+                System.Console.WriteLine("Po wykonaniu akcji");
+            }
+
+            public override void OnActionExecuting(ActionExecutingContext context)
+            {
+                System.Console.WriteLine("Przed wejściem do akcji");
+            }
         }
     }
 }

@@ -21,7 +21,7 @@ namespace demo.Controllers.V2
     [ApiVersion("2.0")]
     public class ApiController : ControllerBase {
         
-        [HttpGet("test")]
+        [HttpGet("test2")]
         public string getVersion() {
             return "Ver 2.0";
         }

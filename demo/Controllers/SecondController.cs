@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 
 namespace demo.Controllers {
     
@@ -28,8 +29,8 @@ namespace demo.Controllers {
 
         //[ViewDataDictionary]
         //public ViewDataDictionary ViewBag { get; set; }
-        
-
+      
+        [HttpGet("Reksio")]
         [ActionName("Reksio")]
         public IActionResult Index() {
             this.Url = this.Url ?? this._url.GetUrlHelper(this.ActionContext);
@@ -39,6 +40,7 @@ namespace demo.Controllers {
             
         }
 
+        [HttpGet("Index")]
         [ActionName("Index")]
         public IActionResult Reksio() {
             // return "Akcja Reksio - nazywana Index - w kontrolerze Ciasteczka";
