@@ -10,7 +10,7 @@ namespace demo.Controllers
     namespace Nested
     {
         
-        [ControllerName("NestedFifthController")]       // adnotacja zmieniająca konwencję 
+        [Tools.ControllerName("NestedFifthController")]       // adnotacja zmieniająca konwencję 
         public class SecondController {
 
             [ActionName("Reksio")]

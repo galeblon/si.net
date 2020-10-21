@@ -20,3 +20,15 @@
 17. Istniejące modele automatycznego wiązania -> sposób zamiany wartości z fabryk dostawców wartości na parametry akcji
 18. Testowanie wiązania modeli
 19. Token anulowania żądania asynchronicznego (przykład -> zadanie dodatkowe)
+---
+20. Różne typy predefiniowanych odpowiedzi IActionResult
+21. Wersjonowanie API -> dependency, ApiVersion, Włączenie nagłówków startup/włączenie url, testy
+22. Dodawanie automatycznie generowanej dokumentacji do API (OpenAPI) -> Dependencies (csproj), DI -> configureServices, modyfikacja middleware - poprawa projektu - -> uwaga!!
+23. Zagadka (OpenAPI - API Versioning bez zmiany nazw) -> /swagger lub /swagger/v1/swagger.json 
+24. Ręczne definiowanie parametrów Cache / Korzystanie z predefiniowanego profilu
+25. Cookies
+26. Sesja - włączenie - użycie
+27. Cache odpowiedzi: DI -> dodanie instancji; middleware - dodanie komponentu 
+28. Pamięć podręczna IMemoryCache
+---
+29. Pamięć podręczna IDistributedCache - włączenie Redis / włączenie SqlServer
