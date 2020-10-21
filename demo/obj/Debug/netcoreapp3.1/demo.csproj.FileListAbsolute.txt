@@ -92,3 +92,9 @@
 /Users/asobecki/Projects/si.net/demo/obj/Debug/netcoreapp3.1/demo.genruntimeconfig.cache
 /Users/asobecki/Projects/si.net/demo/obj/Debug/netcoreapp3.1/Razor/Views/Binding/Formvalue.cshtml.g.cs
 /Users/asobecki/Projects/si.net/demo/obj/Debug/netcoreapp3.1/Razor/Views/Binding/Result.cshtml.g.cs
+/Users/asobecki/Projects/si.net/demo/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Mvc.Versioning.dll
+/Users/asobecki/Projects/si.net/demo/obj/Debug/netcoreapp3.1/demo.MvcApplicationPartsAssemblyInfo.cs
+/Users/asobecki/Projects/si.net/demo/bin/Debug/netcoreapp3.1/Microsoft.OpenApi.dll
+/Users/asobecki/Projects/si.net/demo/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.Swagger.dll
+/Users/asobecki/Projects/si.net/demo/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/asobecki/Projects/si.net/demo/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerUI.dll
