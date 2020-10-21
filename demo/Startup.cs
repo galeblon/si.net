@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Web.Http.Controllers;
 using demo.Models;
 using demo.Tools;
 using Microsoft.AspNetCore.Builder;
@@ -13,6 +14,7 @@ using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 
 namespace demo
@@ -43,7 +45,6 @@ namespace demo
 
             services.AddMvc( options => {
                 options.Conventions.Add(new ControllerNameAttributeConvention());
-
                 options.CacheProfiles.Add("si.net", new Microsoft.AspNetCore.Mvc.CacheProfile {
                     Duration = 60
                 });
@@ -53,7 +54,8 @@ namespace demo
                 options.ReportApiVersions = true;
                 // options.ApiVersionReader = new QueryStringApiVersionReader("api-ver");
                 options.ApiVersionReader = new HeaderApiVersionReader("api-ver");
-                // options.DefaultApiVersion = new Microsoft.AspNetCore.Mvc.ApiVersion(2, 0);
+                options.DefaultApiVersion = new Microsoft.AspNetCore.Mvc.ApiVersion(2, 0);
+                options.AssumeDefaultVersionWhenUnspecified = true;
             });
 
             // cache odpowiedzi
@@ -67,7 +69,6 @@ namespace demo
                 c.SwaggerDoc("v1");
             }); 
             */
-            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -88,6 +89,7 @@ namespace demo
 
             app.UseRouting();
 
+
             app.UseResponseCaching(); // Hubert, lukasz mrugala, patryk poblocki, Dawid Wesołowski
 
             app.UseAuthorization();     // odcinal ze wzgleud na uprawnienia
@@ -99,7 +101,6 @@ namespace demo
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
-                
             });
 
             /*
